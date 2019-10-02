@@ -17,7 +17,7 @@ echo json_encode(array_values($data));
 
 function get_node_data($parent_category_id,$connect){
 
-    $query = "SELECT * FROM tbl_category  
+    $query     = "SELECT * FROM tbl_category  
     WHERE  parent_category_id='".$parent_category_id."'";
     $statement = $connect->prepare($query);
     $statement->execute();
